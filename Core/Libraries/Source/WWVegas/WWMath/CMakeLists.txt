@@ -83,6 +83,10 @@ set(WWMATH_SRC
 add_library(core_wwmath STATIC)
 set_target_properties(core_wwmath PROPERTIES OUTPUT_NAME wwmath)
 
+if(RTS_UNITY_BUILD)
+    set_target_properties(core_wwmath PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_sources(core_wwmath PRIVATE ${WWMATH_SRC})
 
 target_link_libraries(core_wwmath PRIVATE
