@@ -44,6 +44,7 @@
 
 // TheSuperHackers @compile feliwir 17/04/2025 include _ltrotl macros
 #include <Utility/intrin_compat.h>
+#include <Utility/stdint_adapter.h>
 
 /*
 **	This is a CRC engine class. It will process submitted data and generate a CRC from it.
@@ -56,21 +57,21 @@ class CRCEngine {
 	public:
 
 		// Constructor for CRC engine (it can have an override initial CRC value).
-		CRCEngine(long initial=0) : CRC(initial), Index(0) {
+		CRCEngine(uint32_t initial=0) : CRC(initial), Index(0) {
 			StagingBuffer.Composite = 0;
 		};
 
 		// Fetches CRC value.
-		long operator() (void) const {return(Value());};
+		uint32_t operator() (void) const {return(Value());};
 
 		// Submits one byte sized datum to the CRC accumulator.
 		void operator() (char datum);
 
 		// Submits an arbitrary buffer to the CRC accumulator.
-		long operator() (void const * buffer, int length);
+		uint32_t operator() (void const * buffer, int length);
 
 		// Implicit conversion operator so this object appears like a 'long integer'.
-		operator long(void) const {return(Value());};
+		operator uint32_t(void) const {return(Value());};
 
 	protected:
 
@@ -78,7 +79,7 @@ class CRCEngine {
 			return(Index != 0);
 		};
 
-		long Value(void) const {
+		uint32_t Value(void) const {
 			if (Buffer_Needs_Data()) {
 				return(_lrotl(CRC, 1) + StagingBuffer.Composite);
 			}
@@ -89,7 +90,7 @@ class CRCEngine {
 		**	Current accumulator of the CRC value. This value doesn't take into
 		**	consideration any pending data in the staging buffer.
 		*/
-		long CRC;
+		uint32_t CRC;
 
 		/*
 		**	This is the sub index into the staging buffer used to keep track of
@@ -103,8 +104,8 @@ class CRCEngine {
 		**	in preparation for additional data.
 		*/
 		union {
-			long Composite;
-			char Buffer[sizeof(long)];
+			uint32_t Composite;
+			char Buffer[sizeof(uint32_t)];
 		} StagingBuffer;
 };
 
