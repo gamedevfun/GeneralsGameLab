@@ -65,6 +65,11 @@ We provide support for building the project using Visual Studio 6 (VS6) and Visu
 instructions, check the [Wiki](https://github.com/TheSuperHackers/GeneralsGameCode/wiki/build_guides), which also
 includes guides for building with Docker, CLion, and links to forks supporting additional versions.
 
+You can speed up compilation by enabling CMake's *Unity build* support for heavy
+libraries. Pass `-DRTS_UNITY_BUILD=ON` when configuring the project. Be aware
+that Unity builds might reveal issues in fragile code, so disable the option if
+you encounter unexpected compile errors.
+
 ## Contributing
 
 We welcome contributions to the project! If you’re interested in contributing, you need to have knowledge of C++. Join

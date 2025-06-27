@@ -20,6 +20,10 @@ set(PROFILE_SRC
 
 add_library(core_profile STATIC)
 
+if(RTS_UNITY_BUILD)
+    set_target_properties(core_profile PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_sources(core_profile PRIVATE ${PROFILE_SRC})
 
 target_include_directories(core_profile INTERFACE

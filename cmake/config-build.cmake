@@ -8,6 +8,7 @@ option(RTS_BUILD_OPTION_PROFILE "Build code with the \"Profile\" configuration."
 option(RTS_BUILD_OPTION_DEBUG "Build code with the \"Debug\" configuration." OFF)
 option(RTS_BUILD_OPTION_ASAN "Build code with Address Sanitizer." OFF)
 option(RTS_BUILD_OPTION_FFMPEG "Enable FFmpeg support" OFF)
+option(RTS_UNITY_BUILD "Enable Unity build for heavy targets" OFF)
 
 if(NOT RTS_BUILD_ZEROHOUR AND NOT RTS_BUILD_GENERALS)
     set(RTS_BUILD_ZEROHOUR TRUE)
@@ -23,6 +24,7 @@ add_feature_info(ProfileBuild RTS_BUILD_OPTION_PROFILE "Building as a \"Profile\
 add_feature_info(DebugBuild RTS_BUILD_OPTION_DEBUG "Building as a \"Debug\" build")
 add_feature_info(AddressSanitizer RTS_BUILD_OPTION_ASAN "Building with address sanitizer")
 add_feature_info(FFmpegSupport RTS_BUILD_OPTION_FFMPEG "Building with FFmpeg support")
+add_feature_info(UnityBuild RTS_UNITY_BUILD "Build heavy targets using CMake Unity builds")
 
 if(RTS_BUILD_ZEROHOUR)
     option(RTS_BUILD_ZEROHOUR_TOOLS "Build tools for Zero Hour" ON)
@@ -71,4 +73,8 @@ else()
     if(RTS_BUILD_OPTION_PROFILE)
         target_compile_definitions(core_config INTERFACE RTS_PROFILE)
     endif()
+endif()
+
+if(RTS_UNITY_BUILD)
+    set(CMAKE_UNITY_BUILD ON)
 endif()
