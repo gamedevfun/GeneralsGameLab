@@ -203,7 +203,7 @@ unsigned long  CRC::_Table[ 256 ] =
 	0xB40BBE37L, 0xC30C8EA1L, 0x5A05DF1BL, 0x2D02EF8DL
 };
 
-unsigned long	CRC::Memory( unsigned char *data, unsigned long length, unsigned long crc )
+unsigned long	CRC::Memory( const unsigned char *data, unsigned long length, unsigned long crc )
 {
  	crc ^= 0xFFFFFFFF;									// invert previous CRC
 	while ( length-- ) {

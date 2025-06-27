@@ -124,7 +124,7 @@ class CRC {
 public:
 
 	// get the CRC of a block of memory
-	static unsigned long	Memory( unsigned char *data, unsigned long length, unsigned long crc = 0 );
+	static unsigned long    Memory( const unsigned char *data, unsigned long length, unsigned long crc = 0 );
 
 	// get the CRC of a null-terminated string
 	static unsigned long	String( const char *string, unsigned long crc = 0 );
