@@ -228,7 +228,7 @@ void FeatherOptions::PopSliderFinished(const long sliderID, long theVal)
 
 BEGIN_MESSAGE_MAP(FeatherOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(FeatherOptions)
-	ON_EN_CHANGE(IDC_SIZE_EDIT, OnChangeSizeEdit)
+	ON_EN_CHANGE(IDC_SIZE_EDIT, &ThisClass::OnChangeSizeEdit)
 	ON_WM_HSCROLL()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()

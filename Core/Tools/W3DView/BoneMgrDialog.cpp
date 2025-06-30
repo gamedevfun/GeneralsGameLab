@@ -76,10 +76,10 @@ BoneMgrDialogClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(BoneMgrDialogClass, CDialog)
 	//{{AFX_MSG_MAP(BoneMgrDialogClass)
-	ON_NOTIFY(TVN_SELCHANGED, IDC_BONE_TREE, OnSelchangedBoneTree)
-	ON_CBN_SELCHANGE(IDC_OBJECT_COMBO, OnSelchangeObjectCombo)
+	ON_NOTIFY(TVN_SELCHANGED, IDC_BONE_TREE, &ThisClass::OnSelchangedBoneTree)
+	ON_CBN_SELCHANGE(IDC_OBJECT_COMBO, &ThisClass::OnSelchangeObjectCombo)
 	ON_WM_DESTROY()
-	ON_BN_CLICKED(IDC_ATTACH_BUTTON, OnAttachButton)
+	ON_BN_CLICKED(IDC_ATTACH_BUTTON, &ThisClass::OnAttachButton)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -72,9 +72,9 @@ CameraSettingsDialogClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CameraSettingsDialogClass, CDialog)
 	//{{AFX_MSG_MAP(CameraSettingsDialogClass)
-	ON_BN_CLICKED(IDC_FOV_CHECK, OnFovCheck)
-	ON_BN_CLICKED(IDC_CLIP_PLANE_CHECK, OnClipPlaneCheck)
-	ON_BN_CLICKED(IDC_RESET, OnReset)
+	ON_BN_CLICKED(IDC_FOV_CHECK, &ThisClass::OnFovCheck)
+	ON_BN_CLICKED(IDC_CLIP_PLANE_CHECK, &ThisClass::OnClipPlaneCheck)
+	ON_BN_CLICKED(IDC_RESET, &ThisClass::OnReset)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

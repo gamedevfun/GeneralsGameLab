@@ -199,12 +199,12 @@ void EmissionPanelLine::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(EmissionPanelLine, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineStartX, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineStartY, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineStartZ, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineEndX, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineEndY, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_LineEndZ, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineStartX, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineStartY, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineStartZ, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineEndX, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineEndY, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_LineEndZ, &ThisClass::OnParticleSystemEdit)
 
 END_MESSAGE_MAP()
 
@@ -290,9 +290,9 @@ void EmissionPanelBox::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(EmissionPanelBox, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeX, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeY, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeZ, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeX, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeY, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_BoxHalfSizeZ, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 
@@ -348,7 +348,7 @@ void EmissionPanelSphere::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(EmissionPanelSphere, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadius, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadius, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 
@@ -421,6 +421,6 @@ void EmissionPanelCylinder::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(EmissionPanelCylinder, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylRadius, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylLength, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylRadius, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylLength, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()

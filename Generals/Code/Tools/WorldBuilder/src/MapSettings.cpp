@@ -53,10 +53,10 @@ void MapSettings::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(MapSettings, CDialog)
 	//{{AFX_MSG_MAP(MapSettings)
-	ON_CBN_SELENDOK(IDC_MAP_TIMEOFDAY, OnChangeMapTimeofday)
-	ON_CBN_SELENDOK(IDC_MAP_WEATHER, OnChangeMapWeather)
-	ON_EN_CHANGE(IDC_MAP_TITLE, OnChangeMapTitle)
-	ON_CBN_SELENDOK(IDC_MAP_COMPRESSION, OnChangeMapCompression)
+	ON_CBN_SELENDOK(IDC_MAP_TIMEOFDAY, &ThisClass::OnChangeMapTimeofday)
+	ON_CBN_SELENDOK(IDC_MAP_WEATHER, &ThisClass::OnChangeMapWeather)
+	ON_EN_CHANGE(IDC_MAP_TITLE, &ThisClass::OnChangeMapTitle)
+	ON_CBN_SELENDOK(IDC_MAP_COMPRESSION, &ThisClass::OnChangeMapCompression)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -91,8 +91,8 @@ EmitterParticlePropPageClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EmitterParticlePropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(EmitterParticlePropPageClass)
-	ON_BN_CLICKED(IDC_SPECIFY_CREATION_VOLUME, OnSpecifyCreationVolume)
-	ON_BN_CLICKED(IDC_MAX_PARTICLES_CHECK, OnMaxParticlesCheck)
+	ON_BN_CLICKED(IDC_SPECIFY_CREATION_VOLUME, &ThisClass::OnSpecifyCreationVolume)
+	ON_BN_CLICKED(IDC_MAX_PARTICLES_CHECK, &ThisClass::OnMaxParticlesCheck)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

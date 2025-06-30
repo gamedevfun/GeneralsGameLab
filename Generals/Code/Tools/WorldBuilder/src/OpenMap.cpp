@@ -56,10 +56,10 @@ void OpenMap::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(OpenMap, CDialog)
 	//{{AFX_MSG_MAP(OpenMap)
-	ON_BN_CLICKED(IDC_BROWSE, OnBrowse)
-	ON_BN_CLICKED(IDC_SYSTEMMAPS, OnSystemMaps)
-	ON_BN_CLICKED(IDC_USERMAPS, OnUserMaps)
-	ON_LBN_DBLCLK(IDC_OPEN_LIST, OnDblclkOpenList)
+	ON_BN_CLICKED(IDC_BROWSE, &ThisClass::OnBrowse)
+	ON_BN_CLICKED(IDC_SYSTEMMAPS, &ThisClass::OnSystemMaps)
+	ON_BN_CLICKED(IDC_USERMAPS, &ThisClass::OnUserMaps)
+	ON_LBN_DBLCLK(IDC_OPEN_LIST, &ThisClass::OnDblclkOpenList)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -112,7 +112,7 @@ void ParticlePanelParticle::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(ParticlePanelParticle, ISwapablePanel)
-	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeParticle, OnParticleSystemEdit)
+	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeParticle, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 // ParticlePanelDrawable //////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ void ParticlePanelDrawable::clearAllThingTemplates( void )
 }
 
 BEGIN_MESSAGE_MAP(ParticlePanelDrawable, ISwapablePanel)
-	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeDrawable, OnParticleSystemEdit)
+	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeDrawable, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 // ParticlePanelStreak //////////////////////////////////////////////////////////
@@ -208,5 +208,5 @@ void ParticlePanelStreak::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(ParticlePanelStreak, ParticlePanelParticle)
-	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeParticle, OnParticleSystemEdit)
+	ON_CBN_SELCHANGE(IDC_PSEd_ParticleTypeParticle, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()

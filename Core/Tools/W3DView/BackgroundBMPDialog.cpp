@@ -67,7 +67,7 @@ CBackgroundBMPDialog::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CBackgroundBMPDialog, CDialog)
 	//{{AFX_MSG_MAP(CBackgroundBMPDialog)
-	ON_BN_CLICKED(IDC_BROWSE, OnBrowse)
+	ON_BN_CLICKED(IDC_BROWSE, &ThisClass::OnBrowse)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

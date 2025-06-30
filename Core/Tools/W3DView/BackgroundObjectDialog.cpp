@@ -64,8 +64,8 @@ CBackgroundObjectDialog::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CBackgroundObjectDialog, CDialog)
 	//{{AFX_MSG_MAP(CBackgroundObjectDialog)
-	ON_NOTIFY(LVN_ITEMCHANGED, IDC_HIERARCHY_LIST, OnItemChangedHierarchyList)
-	ON_BN_CLICKED(IDC_CLEAR, OnClear)
+	ON_NOTIFY(LVN_ITEMCHANGED, IDC_HIERARCHY_LIST, &ThisClass::OnItemChangedHierarchyList)
+	ON_BN_CLICKED(IDC_CLEAR, &ThisClass::OnClear)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

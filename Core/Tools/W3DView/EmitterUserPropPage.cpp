@@ -83,8 +83,8 @@ EmitterUserPropPageClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EmitterUserPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(EmitterUserPropPageClass)
-	ON_EN_CHANGE(IDC_PROGRAMMER_SETTINGS_EDIT, OnChangeProgrammerSettingsEdit)
-	ON_CBN_SELCHANGE(IDC_TYPE_COMBO, OnSelchangeTypeCombo)
+	ON_EN_CHANGE(IDC_PROGRAMMER_SETTINGS_EDIT, &ThisClass::OnChangeProgrammerSettingsEdit)
+	ON_CBN_SELCHANGE(IDC_TYPE_COMBO, &ThisClass::OnSelchangeTypeCombo)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

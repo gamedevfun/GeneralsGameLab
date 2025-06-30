@@ -56,8 +56,8 @@ void ScorchOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ScorchOptions, CDialog)
 	//{{AFX_MSG_MAP(ScorchOptions)
-	ON_CBN_SELENDOK(IDC_SCORCHTYPE, OnChangeScorchtype)
-	ON_EN_CHANGE(IDC_SIZE_EDIT, OnChangeSizeEdit)
+	ON_CBN_SELENDOK(IDC_SCORCHTYPE, &ThisClass::OnChangeScorchtype)
+	ON_EN_CHANGE(IDC_SIZE_EDIT, &ThisClass::OnChangeSizeEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

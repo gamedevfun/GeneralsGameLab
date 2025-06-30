@@ -167,10 +167,7 @@
             "generator": "Visual Studio 17 2022",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "toolset": "ClangCL",
-            "architecture": {
-                "value": "Win32",
-                "strategy": "external"
-            },
+            "architecture": "Win32",
             "cacheVariables": {
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_MSVC_DEBUG_INFORMATION_FORMAT": "$<$<CONFIG:Release,Debug,RelWithDebInfo>:Embedded>",

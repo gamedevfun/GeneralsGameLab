@@ -144,7 +144,7 @@ void ContourOptions::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 BEGIN_MESSAGE_MAP(ContourOptions, CDialog)
 	//{{AFX_MSG_MAP(ContourOptions)
 	ON_WM_HSCROLL()
-	ON_BN_CLICKED(IDC_SHOW_CONTOURS, OnShowContours)
+	ON_BN_CLICKED(IDC_SHOW_CONTOURS, &ThisClass::OnShowContours)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

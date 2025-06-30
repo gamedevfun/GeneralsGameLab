@@ -60,7 +60,7 @@ void CBackgroundColorDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CBackgroundColorDialog, CDialog)
 	//{{AFX_MSG_MAP(CBackgroundColorDialog)
 	ON_WM_HSCROLL()
-	ON_BN_CLICKED(IDC_GRAYSCALE_CHECK, OnGrayscaleCheck)
+	ON_BN_CLICKED(IDC_GRAYSCALE_CHECK, &ThisClass::OnGrayscaleCheck)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

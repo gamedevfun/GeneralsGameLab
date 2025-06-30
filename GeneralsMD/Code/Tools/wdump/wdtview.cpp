@@ -49,9 +49,9 @@ CWDumpTreeView::~CWDumpTreeView()
 
 BEGIN_MESSAGE_MAP(CWDumpTreeView, CTreeView)
 	//{{AFX_MSG_MAP(CWDumpTreeView)
-	ON_NOTIFY_REFLECT(TVN_SELCHANGED, OnSelchanged)
-	ON_COMMAND(IDM_TOOLS_FIND, OnToolsFind)
-	ON_COMMAND(IDM_TOOLS_FIND_NEXT, OnToolsFindNext)
+	ON_NOTIFY_REFLECT(TVN_SELCHANGED, &ThisClass::OnSelchanged)
+	ON_COMMAND(IDM_TOOLS_FIND, &ThisClass::OnToolsFind)
+	ON_COMMAND(IDM_TOOLS_FIND_NEXT, &ThisClass::OnToolsFindNext)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

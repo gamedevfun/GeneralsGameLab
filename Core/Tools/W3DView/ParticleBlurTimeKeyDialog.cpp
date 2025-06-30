@@ -55,7 +55,7 @@ void ParticleBlurTimeKeyDialogClass::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ParticleBlurTimeKeyDialogClass, CDialog)
 	//{{AFX_MSG_MAP(ParticleBlurTimeKeyDialogClass)
-	ON_BN_CLICKED(IDOK2, OnOk2)
+	ON_BN_CLICKED(IDOK2, &ThisClass::OnOk2)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

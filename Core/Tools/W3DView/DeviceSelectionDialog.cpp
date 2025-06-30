@@ -76,7 +76,7 @@ CDeviceSelectionDialog::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CDeviceSelectionDialog, CDialog)
 	//{{AFX_MSG_MAP(CDeviceSelectionDialog)
-	ON_CBN_SELCHANGE(IDC_RENDER_DEVICE_COMBO, OnSelchangeRenderDeviceCombo)
+	ON_CBN_SELCHANGE(IDC_RENDER_DEVICE_COMBO, &ThisClass::OnSelchangeRenderDeviceCombo)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

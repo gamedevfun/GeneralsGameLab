@@ -48,12 +48,12 @@ void PropEdit::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(PropEdit, CDialog)
 	//{{AFX_MSG_MAP(PropEdit)
-	ON_EN_CHANGE(IDC_KEYNAME, OnChangeKeyname)
-	ON_CBN_EDITCHANGE(IDC_KEYTYPE, OnEditchangeKeytype)
-	ON_CBN_CLOSEUP(IDC_KEYTYPE, OnCloseupKeytype)
-	ON_CBN_SELCHANGE(IDC_KEYTYPE, OnSelchangeKeytype)
-	ON_EN_CHANGE(IDC_VALUE, OnChangeValue)
-	ON_BN_CLICKED(IDC_PROPBOOL, OnPropbool)
+	ON_EN_CHANGE(IDC_KEYNAME, &ThisClass::OnChangeKeyname)
+	ON_CBN_EDITCHANGE(IDC_KEYTYPE, &ThisClass::OnEditchangeKeytype)
+	ON_CBN_CLOSEUP(IDC_KEYTYPE, &ThisClass::OnCloseupKeytype)
+	ON_CBN_SELCHANGE(IDC_KEYTYPE, &ThisClass::OnSelchangeKeytype)
+	ON_EN_CHANGE(IDC_VALUE, &ThisClass::OnChangeValue)
+	ON_BN_CLICKED(IDC_PROPBOOL, &ThisClass::OnPropbool)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

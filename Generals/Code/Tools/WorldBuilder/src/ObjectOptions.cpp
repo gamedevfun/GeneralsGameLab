@@ -82,9 +82,9 @@ void ObjectOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ObjectOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(ObjectOptions)
-	ON_CBN_EDITCHANGE(IDC_OWNINGTEAM, OnEditchangeOwningteam)
-	ON_CBN_CLOSEUP(IDC_OWNINGTEAM, OnCloseupOwningteam)
-	ON_CBN_SELCHANGE(IDC_OWNINGTEAM, OnSelchangeOwningteam)
+	ON_CBN_EDITCHANGE(IDC_OWNINGTEAM, &ThisClass::OnEditchangeOwningteam)
+	ON_CBN_CLOSEUP(IDC_OWNINGTEAM, &ThisClass::OnCloseupOwningteam)
+	ON_CBN_SELCHANGE(IDC_OWNINGTEAM, &ThisClass::OnSelchangeOwningteam)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

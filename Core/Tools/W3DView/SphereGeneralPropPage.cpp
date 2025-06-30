@@ -78,11 +78,11 @@ SphereGeneralPropPageClass::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(SphereGeneralPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(SphereGeneralPropPageClass)
-	ON_BN_CLICKED(IDC_BROWSE_BUTTON, OnBrowseButton)
-	ON_EN_CHANGE(IDC_FILENAME_EDIT, OnChangeFilenameEdit)
-	ON_EN_CHANGE(IDC_NAME_EDIT, OnChangeNameEdit)
-	ON_EN_CHANGE(IDC_LIFETIME_EDIT, OnChangeLifetimeEdit)
-	ON_CBN_SELCHANGE(IDC_SHADER_COMBO, OnSelchangeShaderCombo)
+	ON_BN_CLICKED(IDC_BROWSE_BUTTON, &ThisClass::OnBrowseButton)
+	ON_EN_CHANGE(IDC_FILENAME_EDIT, &ThisClass::OnChangeFilenameEdit)
+	ON_EN_CHANGE(IDC_NAME_EDIT, &ThisClass::OnChangeNameEdit)
+	ON_EN_CHANGE(IDC_LIFETIME_EDIT, &ThisClass::OnChangeLifetimeEdit)
+	ON_CBN_SELCHANGE(IDC_SHADER_COMBO, &ThisClass::OnSelchangeShaderCombo)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

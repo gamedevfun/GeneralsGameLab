@@ -83,9 +83,9 @@ VolumeRandomDialogClass::DoDataExchange (CDataExchange *pDX)
 
 BEGIN_MESSAGE_MAP(VolumeRandomDialogClass, CDialog)
 	//{{AFX_MSG_MAP(VolumeRandomDialogClass)
-	ON_BN_CLICKED(IDC_BOX_RADIO, OnBoxRadio)
-	ON_BN_CLICKED(IDC_CYLINDER_RADIO, OnCylinderRadio)
-	ON_BN_CLICKED(IDC_SPHERE_RADIO, OnSphereRadio)
+	ON_BN_CLICKED(IDC_BOX_RADIO, &ThisClass::OnBoxRadio)
+	ON_BN_CLICKED(IDC_CYLINDER_RADIO, &ThisClass::OnCylinderRadio)
+	ON_BN_CLICKED(IDC_SPHERE_RADIO, &ThisClass::OnSphereRadio)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

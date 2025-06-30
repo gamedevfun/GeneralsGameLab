@@ -55,7 +55,7 @@ void AddPlayerDialog::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(AddPlayerDialog, CDialog)
 	//{{AFX_MSG_MAP(AddPlayerDialog)
-	ON_CBN_EDITCHANGE(IDC_COMBO1, OnEditchangeCombo1)
+	ON_CBN_EDITCHANGE(IDC_COMBO1, &ThisClass::OnEditchangeCombo1)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

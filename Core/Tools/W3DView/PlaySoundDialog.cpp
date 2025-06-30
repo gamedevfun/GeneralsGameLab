@@ -67,8 +67,8 @@ PlaySoundDialogClass::DoDataExchange (CDataExchange *pDX)
 
 BEGIN_MESSAGE_MAP(PlaySoundDialogClass, CDialog)
 	//{{AFX_MSG_MAP(PlaySoundDialogClass)
-	ON_BN_CLICKED(IDC_PLAY_SOUND_EFFECT, OnPlaySoundEffect)
-	ON_BN_CLICKED(IDC_STOP_SOUND_EFFECT, OnStopSoundEffect)
+	ON_BN_CLICKED(IDC_PLAY_SOUND_EFFECT, &ThisClass::OnPlaySoundEffect)
+	ON_BN_CLICKED(IDC_STOP_SOUND_EFFECT, &ThisClass::OnStopSoundEffect)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -129,12 +129,12 @@ BOOL WaterOptions::OnInitDialog()
 
 BEGIN_MESSAGE_MAP(WaterOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(WaterOptions)
-	ON_CBN_KILLFOCUS(IDC_WATERNAME_EDIT, OnChangeWaterEdit)
-	ON_EN_CHANGE(IDC_HEIGHT_EDIT, OnChangeHeightEdit)	 
-	ON_EN_CHANGE(IDC_SPACING, OnChangeSpacingEdit)	 
-	ON_BN_CLICKED(IDC_WATER_POLYGON, OnWaterPolygon)
-	ON_BN_CLICKED(IDC_MAKE_RIVER, OnMakeRiver)
-	ON_CBN_SELENDOK(IDC_WATERNAME_EDIT, OnChangeWaterEdit)
+	ON_CBN_KILLFOCUS(IDC_WATERNAME_EDIT, &ThisClass::OnChangeWaterEdit)
+	ON_EN_CHANGE(IDC_HEIGHT_EDIT, &ThisClass::OnChangeHeightEdit)
+	ON_EN_CHANGE(IDC_SPACING, &ThisClass::OnChangeSpacingEdit)
+	ON_BN_CLICKED(IDC_WATER_POLYGON, &ThisClass::OnWaterPolygon)
+	ON_BN_CLICKED(IDC_MAKE_RIVER, &ThisClass::OnMakeRiver)
+	ON_CBN_SELENDOK(IDC_WATERNAME_EDIT, &ThisClass::OnChangeWaterEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

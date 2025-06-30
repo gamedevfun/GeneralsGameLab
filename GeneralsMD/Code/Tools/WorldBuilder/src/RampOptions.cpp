@@ -82,6 +82,6 @@ void RampOptions::OnWidthChange()
 extern RampOptions* TheRampOptions = NULL;
 
 BEGIN_MESSAGE_MAP(RampOptions, COptionsPanel)
-	ON_BN_CLICKED(IDC_RO_APPLY, OnApply)
-	ON_EN_CHANGE(IDC_RO_WIDTH, OnWidthChange)
+	ON_BN_CLICKED(IDC_RO_APPLY, &ThisClass::OnApply)
+	ON_EN_CHANGE(IDC_RO_WIDTH, &ThisClass::OnWidthChange)
 END_MESSAGE_MAP()

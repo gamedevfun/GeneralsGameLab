@@ -51,10 +51,10 @@ void ShadowOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ShadowOptions, CDialog)
 	//{{AFX_MSG_MAP(ShadowOptions)
-	ON_EN_CHANGE(IDC_ALPHA_EDIT, OnChangeAlphaEdit)
-	ON_EN_CHANGE(IDC_BA_EDIT, OnChangeBaEdit)
-	ON_EN_CHANGE(IDC_GA_EDIT, OnChangeGaEdit)
-	ON_EN_CHANGE(IDC_RA_EDIT, OnChangeRaEdit)
+	ON_EN_CHANGE(IDC_ALPHA_EDIT, &ThisClass::OnChangeAlphaEdit)
+	ON_EN_CHANGE(IDC_BA_EDIT, &ThisClass::OnChangeBaEdit)
+	ON_EN_CHANGE(IDC_GA_EDIT, &ThisClass::OnChangeGaEdit)
+	ON_EN_CHANGE(IDC_RA_EDIT, &ThisClass::OnChangeRaEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

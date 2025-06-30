@@ -57,8 +57,8 @@ void FindDialog::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(FindDialog, CDialog)
 	//{{AFX_MSG_MAP(FindDialog)
-	ON_EN_CHANGE(IDC_FIND_STRING, OnChangeFindString)
-	ON_EN_UPDATE(IDC_FIND_STRING, OnUpdateFindString)
+	ON_EN_CHANGE(IDC_FIND_STRING, &ThisClass::OnChangeFindString)
+	ON_EN_UPDATE(IDC_FIND_STRING, &ThisClass::OnUpdateFindString)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

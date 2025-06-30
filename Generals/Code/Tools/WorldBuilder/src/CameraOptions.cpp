@@ -51,9 +51,9 @@ void CameraOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CameraOptions, CDialog)
 	//{{AFX_MSG_MAP(CameraOptions)
-	ON_BN_CLICKED(IDC_CameraReset, OnCameraReset)
+	ON_BN_CLICKED(IDC_CameraReset, &ThisClass::OnCameraReset)
 	ON_WM_MOVE()
-	ON_EN_CHANGE(IDC_PITCH_EDIT, OnChangePitchEdit)
+	ON_EN_CHANGE(IDC_PITCH_EDIT, &ThisClass::OnChangePitchEdit)
 	ON_WM_SHOWWINDOW()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()

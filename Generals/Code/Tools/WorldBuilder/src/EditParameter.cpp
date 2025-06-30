@@ -100,9 +100,9 @@ void EditParameter::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EditParameter, CDialog)
 	//{{AFX_MSG_MAP(EditParameter)
-	ON_EN_CHANGE(IDC_EDIT, OnChangeEdit)
-	ON_CBN_EDITCHANGE(IDC_COMBO, OnEditchangeCombo)
-	ON_BN_CLICKED(IDC_PREVIEWSOUND, OnPreviewSound)
+	ON_EN_CHANGE(IDC_EDIT, &ThisClass::OnChangeEdit)
+	ON_CBN_EDITCHANGE(IDC_COMBO, &ThisClass::OnEditchangeCombo)
+	ON_BN_CLICKED(IDC_PREVIEWSOUND, &ThisClass::OnPreviewSound)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

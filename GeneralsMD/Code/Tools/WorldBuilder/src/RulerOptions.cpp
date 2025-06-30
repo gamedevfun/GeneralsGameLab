@@ -125,8 +125,8 @@ void RulerOptions::OnChangeCheckRuler()
 
 BEGIN_MESSAGE_MAP(RulerOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(RulerOptions)
-	ON_EN_CHANGE(IDC_RULER_WIDTH, OnChangeWidthEdit)
-	ON_BN_CLICKED(IDC_CHECK_RULER, OnChangeCheckRuler)
+	ON_EN_CHANGE(IDC_RULER_WIDTH, &ThisClass::OnChangeWidthEdit)
+	ON_BN_CLICKED(IDC_CHECK_RULER, &ThisClass::OnChangeCheckRuler)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

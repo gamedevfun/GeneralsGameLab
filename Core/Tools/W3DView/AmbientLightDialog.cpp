@@ -62,7 +62,7 @@ void CAmbientLightDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CAmbientLightDialog, CDialog)
 	//{{AFX_MSG_MAP(CAmbientLightDialog)
 	ON_WM_HSCROLL()
-	ON_BN_CLICKED(IDC_GRAYSCALE_CHECK, OnGrayscaleCheck)
+	ON_BN_CLICKED(IDC_GRAYSCALE_CHECK, &ThisClass::OnGrayscaleCheck)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

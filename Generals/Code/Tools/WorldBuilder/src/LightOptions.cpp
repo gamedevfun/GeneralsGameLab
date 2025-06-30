@@ -142,11 +142,11 @@ BOOL LightOptions::OnInitDialog()
 
 BEGIN_MESSAGE_MAP(LightOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(LightOptions)
-	ON_EN_CHANGE(IDC_RA_EDIT, OnChangeLightEdit)
-	ON_EN_CHANGE(IDC_GA_EDIT, OnChangeLightEdit)
-	ON_EN_CHANGE(IDC_BA_EDIT, OnChangeLightEdit)
-	ON_EN_CHANGE(IDC_HEIGHT_EDIT, OnChangeLightEdit)
-	ON_EN_CHANGE(IDC_RADIUS_EDIT, OnChangeLightEdit)
+	ON_EN_CHANGE(IDC_RA_EDIT, &ThisClass::OnChangeLightEdit)
+	ON_EN_CHANGE(IDC_GA_EDIT, &ThisClass::OnChangeLightEdit)
+	ON_EN_CHANGE(IDC_BA_EDIT, &ThisClass::OnChangeLightEdit)
+	ON_EN_CHANGE(IDC_HEIGHT_EDIT, &ThisClass::OnChangeLightEdit)
+	ON_EN_CHANGE(IDC_RADIUS_EDIT, &ThisClass::OnChangeLightEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
