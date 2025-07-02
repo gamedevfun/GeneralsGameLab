@@ -26,6 +26,10 @@ set(DEBUG_SRC
 
 add_library(core_debug STATIC)
 
+if(RTS_UNITY_BUILD)
+    set_target_properties(core_debug PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_sources(core_debug PRIVATE ${DEBUG_SRC})
 
 target_include_directories(core_debug INTERFACE

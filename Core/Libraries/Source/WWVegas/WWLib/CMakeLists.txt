@@ -159,6 +159,10 @@ endif()
 add_library(core_wwlib STATIC)
 set_target_properties(core_wwlib PROPERTIES OUTPUT_NAME wwlib)
 
+if(RTS_UNITY_BUILD)
+    set_target_properties(core_wwlib PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_sources(core_wwlib PRIVATE ${WWLIB_SRC})
 
 target_include_directories(core_wwlib PUBLIC
