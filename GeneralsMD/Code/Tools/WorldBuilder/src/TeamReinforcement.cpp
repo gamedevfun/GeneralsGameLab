@@ -50,12 +50,12 @@ void TeamReinforcement::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(TeamReinforcement, CPropertyPage)
 	//{{AFX_MSG_MAP(TeamReinforcement)
-	ON_BN_CLICKED(IDC_DEPLOY_BY, OnDeployBy)
-	ON_BN_CLICKED(IDC_TEAM_STARTS_FULL, OnTeamStartsFull)
-	ON_CBN_SELCHANGE(IDC_TRANSPORT_COMBO, OnSelchangeTransportCombo)
-	ON_BN_CLICKED(IDC_TRANSPORTS_EXIT, OnTransportsExit)
-	ON_CBN_SELCHANGE(IDC_VETERANCY, OnSelchangeVeterancy)
-	ON_CBN_SELCHANGE(IDC_WAYPOINT_COMBO, OnSelchangeWaypointCombo)
+	ON_BN_CLICKED(IDC_DEPLOY_BY, &ThisClass::OnDeployBy)
+	ON_BN_CLICKED(IDC_TEAM_STARTS_FULL, &ThisClass::OnTeamStartsFull)
+	ON_CBN_SELCHANGE(IDC_TRANSPORT_COMBO, &ThisClass::OnSelchangeTransportCombo)
+	ON_BN_CLICKED(IDC_TRANSPORTS_EXIT, &ThisClass::OnTransportsExit)
+	ON_CBN_SELCHANGE(IDC_VETERANCY, &ThisClass::OnSelchangeVeterancy)
+	ON_CBN_SELCHANGE(IDC_WAYPOINT_COMBO, &ThisClass::OnSelchangeWaypointCombo)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

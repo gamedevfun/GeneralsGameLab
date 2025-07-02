@@ -274,9 +274,9 @@ void MoundOptions::PopSliderFinished(const long sliderID, long theVal)
 BEGIN_MESSAGE_MAP(MoundOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(MoundOptions)
 	ON_WM_HSCROLL()
-	ON_EN_CHANGE(IDC_FEATHER_EDIT, OnChangeFeatherEdit)
-	ON_EN_CHANGE(IDC_SIZE_EDIT, OnChangeSizeEdit)
-	ON_EN_CHANGE(IDC_HEIGHT_EDIT, OnChangeHeightEdit)
+	ON_EN_CHANGE(IDC_FEATHER_EDIT, &ThisClass::OnChangeFeatherEdit)
+	ON_EN_CHANGE(IDC_SIZE_EDIT, &ThisClass::OnChangeSizeEdit)
+	ON_EN_CHANGE(IDC_HEIGHT_EDIT, &ThisClass::OnChangeHeightEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

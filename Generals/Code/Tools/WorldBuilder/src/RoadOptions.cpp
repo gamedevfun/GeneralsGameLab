@@ -74,11 +74,11 @@ void RoadOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(RoadOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(RoadOptions)
-	ON_BN_CLICKED(IDC_TIGHT_CURVE, OnTightCurve)
-	ON_BN_CLICKED(IDC_ANGLED, OnAngled)
-	ON_BN_CLICKED(IDC_BROAD_CURVE, OnBroadCurve)
-	ON_BN_CLICKED(IDC_JOIN, OnJoin)
-	ON_BN_CLICKED(IDC_APPLY_ROAD, OnApplyRoad)
+	ON_BN_CLICKED(IDC_TIGHT_CURVE, &ThisClass::OnTightCurve)
+	ON_BN_CLICKED(IDC_ANGLED, &ThisClass::OnAngled)
+	ON_BN_CLICKED(IDC_BROAD_CURVE, &ThisClass::OnBroadCurve)
+	ON_BN_CLICKED(IDC_JOIN, &ThisClass::OnJoin)
+	ON_BN_CLICKED(IDC_APPLY_ROAD, &ThisClass::OnApplyRoad)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -49,7 +49,7 @@ void EditCondition::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EditCondition, CDialog)
 	//{{AFX_MSG_MAP(EditCondition)
-	ON_CBN_SELCHANGE(IDC_CONDITION_TYPE, OnSelchangeConditionType)
+	ON_CBN_SELCHANGE(IDC_CONDITION_TYPE, &ThisClass::OnSelchangeConditionType)
 	ON_WM_TIMER()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()

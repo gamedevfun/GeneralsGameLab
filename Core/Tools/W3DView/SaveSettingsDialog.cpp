@@ -67,8 +67,8 @@ CSaveSettingsDialog::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CSaveSettingsDialog, CDialog)
 	//{{AFX_MSG_MAP(CSaveSettingsDialog)
-	ON_BN_CLICKED(IDC_BROWSE_BUTTON, OnBrowseButton)
-	ON_EN_UPDATE(IDC_FILENAME_EDIT, OnUpdateFilenameEdit)
+	ON_BN_CLICKED(IDC_BROWSE_BUTTON, &ThisClass::OnBrowseButton)
+	ON_EN_UPDATE(IDC_FILENAME_EDIT, &ThisClass::OnUpdateFilenameEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

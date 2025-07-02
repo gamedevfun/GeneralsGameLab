@@ -111,7 +111,7 @@ EmitterColorPropPageClass::DoDataExchange (CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(EmitterColorPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(EmitterColorPropPageClass)
 	ON_WM_DESTROY()
-	ON_NOTIFY(UDN_DELTAPOS, IDC_RED_RANDOM_SPIN, OnDeltaposRedRandomSpin)
+	ON_NOTIFY(UDN_DELTAPOS, IDC_RED_RANDOM_SPIN, &ThisClass::OnDeltaposRedRandomSpin)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

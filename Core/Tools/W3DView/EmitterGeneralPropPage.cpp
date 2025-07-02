@@ -88,12 +88,12 @@ EmitterGeneralPropPageClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EmitterGeneralPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(EmitterGeneralPropPageClass)
-	ON_BN_CLICKED(IDC_BROWSE_BUTTON, OnBrowseButton)
-	ON_EN_CHANGE(IDC_FILENAME_EDIT, OnChangeFilenameEdit)
-	ON_EN_CHANGE(IDC_NAME_EDIT, OnChangeNameEdit)
-	ON_EN_CHANGE(IDC_PARTICLE_LIFETIME_EDIT, OnChangeParticleLifetimeEdit)
-	ON_CBN_SELCHANGE(IDC_SHADER_COMBO, OnSelchangeShaderCombo)
-	ON_BN_CLICKED(IDC_PARTICLE_LIFETIME_CHECK, OnParticleLifetimeCheck)
+	ON_BN_CLICKED(IDC_BROWSE_BUTTON, &ThisClass::OnBrowseButton)
+	ON_EN_CHANGE(IDC_FILENAME_EDIT, &ThisClass::OnChangeFilenameEdit)
+	ON_EN_CHANGE(IDC_NAME_EDIT, &ThisClass::OnChangeNameEdit)
+	ON_EN_CHANGE(IDC_PARTICLE_LIFETIME_EDIT, &ThisClass::OnChangeParticleLifetimeEdit)
+	ON_CBN_SELCHANGE(IDC_SHADER_COMBO, &ThisClass::OnSelchangeShaderCombo)
+	ON_BN_CLICKED(IDC_PARTICLE_LIFETIME_CHECK, &ThisClass::OnParticleLifetimeCheck)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

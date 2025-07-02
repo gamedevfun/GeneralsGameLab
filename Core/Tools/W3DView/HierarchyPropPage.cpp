@@ -80,7 +80,7 @@ CHierarchyPropPage::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CHierarchyPropPage, CPropertyPage)
 	//{{AFX_MSG_MAP(CHierarchyPropPage)
-	ON_NOTIFY(NM_DBLCLK, IDC_SUBOBJECT_LIST, OnDblclkSubObjectList)
+	ON_NOTIFY(NM_DBLCLK, IDC_SUBOBJECT_LIST, &ThisClass::OnDblclkSubObjectList)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

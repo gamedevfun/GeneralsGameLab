@@ -86,7 +86,7 @@ void FenceOptions::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(FenceOptions, COptionsPanel)
 	//{{AFX_MSG_MAP(FenceOptions)
-	ON_EN_CHANGE(IDC_FENCE_SPACING_EDIT, OnChangeFenceSpacingEdit)
+	ON_EN_CHANGE(IDC_FENCE_SPACING_EDIT, &ThisClass::OnChangeFenceSpacingEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

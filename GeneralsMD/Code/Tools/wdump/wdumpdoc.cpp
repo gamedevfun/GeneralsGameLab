@@ -37,7 +37,7 @@ IMPLEMENT_DYNCREATE(CWdumpDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CWdumpDoc, CDocument)
 	//{{AFX_MSG_MAP(CWdumpDoc)
-	ON_COMMAND(ID_FILE_OPEN, OnFileOpen)
+	ON_COMMAND(ID_FILE_OPEN, &ThisClass::OnFileOpen)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

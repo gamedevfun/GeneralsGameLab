@@ -55,7 +55,7 @@ void GammaDialogClass::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(GammaDialogClass, CDialog)
 	//{{AFX_MSG_MAP(GammaDialogClass)
-	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_GAMMA_SLIDER, OnReleasedcaptureGammaSlider)
+	ON_NOTIFY(NM_RELEASEDCAPTURE, IDC_GAMMA_SLIDER, &ThisClass::OnReleasedcaptureGammaSlider)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

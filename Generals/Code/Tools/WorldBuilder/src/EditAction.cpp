@@ -55,7 +55,7 @@ void EditAction::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EditAction, CDialog)
 	//{{AFX_MSG_MAP(EditAction)
-	ON_CBN_SELCHANGE(IDC_CONDITION_TYPE, OnSelchangeScriptActionType)
+	ON_CBN_SELCHANGE(IDC_CONDITION_TYPE, &ThisClass::OnSelchangeScriptActionType)
 	ON_WM_TIMER()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()

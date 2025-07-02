@@ -182,17 +182,17 @@ HINSTANCE ApplicationHInstance = NULL;
 
 BEGIN_MESSAGE_MAP(CWorldBuilderApp, CWinApp)
 	//{{AFX_MSG_MAP(CWorldBuilderApp)
-	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
-	ON_COMMAND(IDM_RESET_WINDOWS, OnResetWindows)
-	ON_COMMAND(ID_FILE_OPEN, OnFileOpen)
-	ON_COMMAND(ID_TEXTURESIZING_MAPCLIFFTEXTURES, OnTexturesizingMapclifftextures)
-	ON_UPDATE_COMMAND_UI(ID_TEXTURESIZING_MAPCLIFFTEXTURES, OnUpdateTexturesizingMapclifftextures)
+	ON_COMMAND(ID_APP_ABOUT, &ThisClass::OnAppAbout)
+	ON_COMMAND(IDM_RESET_WINDOWS, &ThisClass::OnResetWindows)
+	ON_COMMAND(ID_FILE_OPEN, &ThisClass::OnFileOpen)
+	ON_COMMAND(ID_TEXTURESIZING_MAPCLIFFTEXTURES, &ThisClass::OnTexturesizingMapclifftextures)
+	ON_UPDATE_COMMAND_UI(ID_TEXTURESIZING_MAPCLIFFTEXTURES, &ThisClass::OnUpdateTexturesizingMapclifftextures)
 	//}}AFX_MSG_MAP
 	// Standard file based document commands
-	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)
+	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
+	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 	// Standard print setup command
-	ON_COMMAND(ID_FILE_PRINT_SETUP, CWinApp::OnFilePrintSetup)
+	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

@@ -234,7 +234,7 @@ ColorPickerDialogClass::DoDataExchange (CDataExchange *pDX)
 
 BEGIN_MESSAGE_MAP(ColorPickerDialogClass, CDialog)
 	//{{AFX_MSG_MAP(ColorPickerDialogClass)
-	ON_BN_CLICKED(IDC_RESET, OnReset)
+	ON_BN_CLICKED(IDC_RESET, &ThisClass::OnReset)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

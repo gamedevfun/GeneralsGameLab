@@ -164,12 +164,12 @@ void VelocityPanelOrtho::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(VelocityPanelOrtho, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoXMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoYMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoZMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoXMax, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoYMax, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OrthoZMax, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoXMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoYMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoZMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoXMax, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoYMax, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OrthoZMax, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 // VelocityPanelSphere ////////////////////////////////////////////////////////
@@ -238,8 +238,8 @@ void VelocityPanelSphere::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(VelocityPanelSphere, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadialMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadialMax, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadialMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_SphereRadialMax, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 
@@ -309,8 +309,8 @@ void VelocityPanelHemisphere::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(VelocityPanelHemisphere, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_HemisphereRadialMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_HemisphereRadialMax, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_HemisphereRadialMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_HemisphereRadialMax, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 // VelocityPanelCylinder //////////////////////////////////////////////////////
@@ -409,10 +409,10 @@ void VelocityPanelCylinder::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(VelocityPanelCylinder, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylinderRadialMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylinderNormalMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylinderRadialMax, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_CylinderNormalMax, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylinderRadialMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylinderNormalMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylinderRadialMax, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_CylinderNormalMax, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()
 
 // VelocityPanelOutward ///////////////////////////////////////////////////////////
@@ -511,8 +511,8 @@ void VelocityPanelOutward::OnParticleSystemEdit()
 }
 
 BEGIN_MESSAGE_MAP(VelocityPanelOutward, ISwapablePanel)
-	ON_EN_KILLFOCUS(IDC_PSEd_OutwardSpeedMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OutwardOtherMin, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OutwardSpeedMax, OnParticleSystemEdit)
-	ON_EN_KILLFOCUS(IDC_PSEd_OutwardOtherMax, OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OutwardSpeedMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OutwardOtherMin, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OutwardSpeedMax, &ThisClass::OnParticleSystemEdit)
+	ON_EN_KILLFOCUS(IDC_PSEd_OutwardOtherMax, &ThisClass::OnParticleSystemEdit)
 END_MESSAGE_MAP()

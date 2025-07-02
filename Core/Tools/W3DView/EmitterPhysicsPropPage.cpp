@@ -98,7 +98,7 @@ EmitterPhysicsPropPageClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EmitterPhysicsPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(EmitterPhysicsPropPageClass)
-	ON_BN_CLICKED(IDC_SPECIFY_VELOCITY_RANDOM, OnSpecifyVelocityRandom)
+	ON_BN_CLICKED(IDC_SPECIFY_VELOCITY_RANDOM, &ThisClass::OnSpecifyVelocityRandom)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

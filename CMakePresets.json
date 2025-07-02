@@ -162,6 +162,33 @@
             }
         },
         {
+            "name": "vs2022-clang",
+            "displayName": "VS2022 Clang Win32 Release",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "toolset": "ClangCL",
+            "architecture": "Win32",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_MSVC_DEBUG_INFORMATION_FORMAT": "$<$<CONFIG:Release,Debug,RelWithDebInfo>:Embedded>",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL",
+                "RTS_FLAGS": "/W3"
+            },
+            "vendor": {
+                "jetbrains.com/clion": {
+                    "toolchain": "ClangCL"
+                }
+            }
+        },
+        {
+            "name": "vs2022-clang-debug",
+            "inherits": "vs2022-clang",
+            "displayName": "VS2022 Clang Win32 Debug",
+            "cacheVariables": {
+                "RTS_BUILD_OPTION_DEBUG": "ON"
+            }
+        },
+        {
             "name": "unix",
             "inherits": "default-vcpkg",
             "hidden": false,
@@ -247,6 +274,20 @@
             "configurePreset": "win32-vcpkg-debug",
             "displayName": "Build Windows 32bit VCPKG Debug",
             "description": "Build Windows 32bit VCPKG Debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs2022-clang",
+            "configurePreset": "vs2022-clang",
+            "displayName": "Build VS2022 Clang Win32 Release",
+            "description": "Build VS2022 Clang Win32 Release",
+            "configuration": "Release"
+        },
+        {
+            "name": "vs2022-clang-debug",
+            "configurePreset": "vs2022-clang-debug",
+            "displayName": "Build VS2022 Clang Win32 Debug",
+            "description": "Build VS2022 Clang Win32 Debug",
             "configuration": "Debug"
         },
         {
@@ -411,6 +452,32 @@
                 {
                     "type": "build",
                     "name": "win32-vcpkg-debug"
+                }
+            ]
+        },
+        {
+            "name": "vs2022-clang",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "vs2022-clang"
+                },
+                {
+                    "type": "build",
+                    "name": "vs2022-clang"
+                }
+            ]
+        },
+        {
+            "name": "vs2022-clang-debug",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "vs2022-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "vs2022-clang-debug"
                 }
             ]
         },

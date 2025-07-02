@@ -66,8 +66,8 @@ TexturePathDialogClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(TexturePathDialogClass, CDialog)
 	//{{AFX_MSG_MAP(TexturePathDialogClass)
-	ON_BN_CLICKED(IDC_BROWSE1, OnBrowse1)
-	ON_BN_CLICKED(IDC_BROWSE2, OnBrowse2)
+	ON_BN_CLICKED(IDC_BROWSE1, &ThisClass::OnBrowse1)
+	ON_BN_CLICKED(IDC_BROWSE2, &ThisClass::OnBrowse2)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

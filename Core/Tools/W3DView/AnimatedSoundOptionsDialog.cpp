@@ -64,9 +64,9 @@ void AnimatedSoundOptionsDialogClass::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(AnimatedSoundOptionsDialogClass, CDialog)
 	//{{AFX_MSG_MAP(AnimatedSoundOptionsDialogClass)
-	ON_BN_CLICKED(IDC_SOUND_DEFINITION_LIBRARY_BROWSE_BUTTON, OnSoundDefinitionLibraryBrowseButton)
-	ON_BN_CLICKED(IDC_SOUND_INI_BROWSE_BUTTON, OnSoundIniBrowseButton)
-	ON_BN_CLICKED(IDC_SOUND_PATH_BROWSE_BUTTON, OnSoundPathBrowseButton)
+	ON_BN_CLICKED(IDC_SOUND_DEFINITION_LIBRARY_BROWSE_BUTTON, &ThisClass::OnSoundDefinitionLibraryBrowseButton)
+	ON_BN_CLICKED(IDC_SOUND_INI_BROWSE_BUTTON, &ThisClass::OnSoundIniBrowseButton)
+	ON_BN_CLICKED(IDC_SOUND_PATH_BROWSE_BUTTON, &ThisClass::OnSoundPathBrowseButton)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

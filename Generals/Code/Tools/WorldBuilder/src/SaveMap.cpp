@@ -55,10 +55,10 @@ void SaveMap::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(SaveMap, CDialog)
 	//{{AFX_MSG_MAP(SaveMap)
-	ON_BN_CLICKED(IDC_BROWSE, OnBrowse)
-	ON_BN_CLICKED(IDC_SYSTEMMAPS, OnSystemMaps)
-	ON_BN_CLICKED(IDC_USERMAPS, OnUserMaps)
-	ON_LBN_SELCHANGE(IDC_SAVE_LIST, OnSelchangeSaveList)
+	ON_BN_CLICKED(IDC_BROWSE, &ThisClass::OnBrowse)
+	ON_BN_CLICKED(IDC_SYSTEMMAPS, &ThisClass::OnSystemMaps)
+	ON_BN_CLICKED(IDC_USERMAPS, &ThisClass::OnUserMaps)
+	ON_LBN_SELCHANGE(IDC_SAVE_LIST, &ThisClass::OnSelchangeSaveList)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

@@ -106,6 +106,6 @@ void ImpassableOptions::OnPreview()
 }
 
 BEGIN_MESSAGE_MAP(ImpassableOptions, CDialog)
-	ON_EN_UPDATE(IDC_ANGLE, OnAngleChange)
-	ON_BN_CLICKED(IDC_PREVIEW, OnPreview)
+	ON_EN_UPDATE(IDC_ANGLE, &ThisClass::OnAngleChange)
+	ON_BN_CLICKED(IDC_PREVIEW, &ThisClass::OnPreview)
 END_MESSAGE_MAP()

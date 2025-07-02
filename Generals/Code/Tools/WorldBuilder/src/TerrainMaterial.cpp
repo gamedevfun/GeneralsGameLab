@@ -67,11 +67,11 @@ void TerrainMaterial::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(TerrainMaterial, COptionsPanel)
 	//{{AFX_MSG_MAP(TerrainMaterial)
-	ON_BN_CLICKED(IDC_SWAP_TEXTURES, OnSwapTextures)
-	ON_EN_CHANGE(IDC_SIZE_EDIT, OnChangeSizeEdit)
-	ON_BN_CLICKED(IDC_IMPASSABLE, OnImpassable)
-	ON_BN_CLICKED(IDC_PASSABLE_CHECK, OnPassableCheck)
-	ON_BN_CLICKED(IDC_PASSABLE, OnPassable)
+	ON_BN_CLICKED(IDC_SWAP_TEXTURES, &ThisClass::OnSwapTextures)
+	ON_EN_CHANGE(IDC_SIZE_EDIT, &ThisClass::OnChangeSizeEdit)
+	ON_BN_CLICKED(IDC_IMPASSABLE, &ThisClass::OnImpassable)
+	ON_BN_CLICKED(IDC_PASSABLE_CHECK, &ThisClass::OnPassableCheck)
+	ON_BN_CLICKED(IDC_PASSABLE, &ThisClass::OnPassable)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

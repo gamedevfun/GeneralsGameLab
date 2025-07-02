@@ -89,8 +89,8 @@ SphereColorPropPageClass::DoDataExchange (CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(SphereColorPropPageClass, CPropertyPage)
 	//{{AFX_MSG_MAP(SphereColorPropPageClass)
 	ON_WM_DESTROY()
-	ON_BN_CLICKED(IDC_OPACITY_VECTOR_CHECK, OnOpacityVectorCheck)
-	ON_BN_CLICKED(IDC_INVERT_VECTOR_CHECK, OnInvertVectorCheck)
+	ON_BN_CLICKED(IDC_OPACITY_VECTOR_CHECK, &ThisClass::OnOpacityVectorCheck)
+	ON_BN_CLICKED(IDC_INVERT_VECTOR_CHECK, &ThisClass::OnInvertVectorCheck)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

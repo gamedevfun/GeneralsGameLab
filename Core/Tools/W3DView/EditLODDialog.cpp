@@ -77,12 +77,12 @@ CEditLODDialog::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CEditLODDialog, CDialog)
 	//{{AFX_MSG_MAP(CEditLODDialog)
-	ON_NOTIFY(UDN_DELTAPOS, IDC_SWITCH_UP_SPIN, OnDeltaposSwitchUpSpin)
-	ON_NOTIFY(UDN_DELTAPOS, IDC_SWITCH_DN_SPIN, OnDeltaposSwitchDnSpin)
-	ON_NOTIFY(LVN_ITEMCHANGED, IDC_HIERARCHY_LIST, OnItemChangedHierarchyList)
-	ON_EN_UPDATE(IDC_SWITCH_DN_EDIT, OnUpdateSwitchDnEdit)
-	ON_EN_UPDATE(IDC_SWITCH_UP_EDIT, OnUpdateSwitchUpEdit)
-	ON_BN_CLICKED(IDC_RECALC, OnRecalc)
+	ON_NOTIFY(UDN_DELTAPOS, IDC_SWITCH_UP_SPIN, &ThisClass::OnDeltaposSwitchUpSpin)
+	ON_NOTIFY(UDN_DELTAPOS, IDC_SWITCH_DN_SPIN, &ThisClass::OnDeltaposSwitchDnSpin)
+	ON_NOTIFY(LVN_ITEMCHANGED, IDC_HIERARCHY_LIST, &ThisClass::OnItemChangedHierarchyList)
+	ON_EN_UPDATE(IDC_SWITCH_DN_EDIT, &ThisClass::OnUpdateSwitchDnEdit)
+	ON_EN_UPDATE(IDC_SWITCH_UP_EDIT, &ThisClass::OnUpdateSwitchUpEdit)
+	ON_BN_CLICKED(IDC_RECALC, &ThisClass::OnRecalc)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

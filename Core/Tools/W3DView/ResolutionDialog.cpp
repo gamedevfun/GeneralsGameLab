@@ -70,7 +70,7 @@ ResolutionDialogClass::DoDataExchange (CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ResolutionDialogClass, CDialog)
 	//{{AFX_MSG_MAP(ResolutionDialogClass)
-	ON_NOTIFY(NM_DBLCLK, IDC_RESOLUTION_LIST_CTRL, OnDblclkResolutionListCtrl)
+	ON_NOTIFY(NM_DBLCLK, IDC_RESOLUTION_LIST_CTRL, &ThisClass::OnDblclkResolutionListCtrl)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
